@@ -26,17 +26,17 @@ def get_graph_data():
 
 
 # Funcao que monta a matriz de transicao P
-def build_transion_matriz():
+def build_transion_matrix(nodes, idx, edges, n):
     P = np.zeros((n, n), dtype=float)
 
-    for src, i in enumerate(nodes):
-        outs = edges.get(i, [])
+    for src_index, src_name in enumerate(nodes):
+        outs = edges.get(src_name, [])
 
         if len(outs) == 0:
-            P[:, i] = 1.0 / n
+            P[:, src_index] = 1.0 / n
         else:
             prob = 1.0 / len(outs)
-            for dst in outs:
-                j = idx[dst]
-                P[j, i] = prob
+            for dst_name in outs:
+                dst_index = idx[dst_name]
+                P[dst_index, src_index] = prob
     return P
