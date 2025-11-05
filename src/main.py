@@ -18,14 +18,16 @@ def main():
     sleep(0.5)
     # Monta a matriz de transiçao P
     print("\n# 2) Montando Matriz de Transição P...")
+    sleep(1)
     P = build_transion_matrix(nodes, idx, edges, n)
     print("Matriz P:\n", P)
     sleep(1)
 
     print("\n# 3) Aplicando Damping (Google Matriz G)...")
-    sleep(0.5)
+    sleep(1)
     G = apply_damping(P, alpha, n)
     print("Matriz G:\n", G)
+    sleep(1)
 
     print("\n# 4) PageRank por interação de potência...")
     pagerank_vector = power_interation(G, n)
