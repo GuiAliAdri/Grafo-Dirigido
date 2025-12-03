@@ -1,13 +1,2 @@
-__pycache__/
-*.pyc
-
-.venv/
-venv/
-env/
-output/
-
-*.log
-.vscode/
-.idea/
-
-notations.md
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*

@@ -8,7 +8,7 @@ from modules.utils import draw_graph, export_csv, get_ranking, print_ranking
 
 def main():
     print("================= INICIANDO PROGRAMA =================")
-    # Funcao Principal
+    
     # Preparacao dos dados
     nodes, idx, edges, n = get_graph_data()
     alpha = 0.85  # Google Matriz Factor
@@ -16,6 +16,7 @@ def main():
     print(f"Total de nós (n): {n}")
     print(f"Fator de damping (alpha): {alpha}")
     sleep(0.5)
+
     # Monta a matriz de transiçao P
     print("\n# 2) Montando Matriz de Transição P...")
     sleep(1)
