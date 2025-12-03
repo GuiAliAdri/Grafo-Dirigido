@@ -1,21 +1,21 @@
 import numpy as np
 
 # Aqui esta a parte de definicao dos grafos
-nodes = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+nodes = ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10"]
 idx = {v: i for i, v in enumerate(nodes)}
 
 # Array das bordas
 edges = {
-    "A": ["B", "C", "D"],
-    "B": ["C", "E"],
-    "C": ["A"],
-    "D": ["C", "E", "F"],
-    "E": ["F", "G"],
-    "F": ["G"],
-    "G": ["E", "H", "I"],
-    "H": ["I"],
-    "I": ["J"],
-    "J": ["G"],
+    "P1": ["P2", "P3", "P4"],
+    "P2": ["P3", "P5"],
+    "P3": ["P1"],
+    "P4": ["P3", "P5", "P6"],
+    "P5": ["P6", "P7"],
+    "P6": ["P7"],
+    "P7": ["P5", "P8", "P9"],
+    "P8": ["P9"],
+    "P9": ["P10"],
+    "P10": ["P7"],
 }
 n = len(nodes)
 
